@@ -1,0 +1,30 @@
+#components{
+    /* display: flex; */
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+}
+
+#firstContainer, #secondContainer,#thirdContainer{
+    border: 1px;
+    padding: 10px;
+    border-style: solid;
+    border-color: black;
+    flex: 1 0 23%
+}
+
+.buttons{
+    padding: 0 10px;
+    margin: 10px;
+}
+
+#buttons{
+    display: flex;
+    justify-content: center;
+}
+
+#searchingBy{
+    display: flex;
+    justify-content: center;
+}

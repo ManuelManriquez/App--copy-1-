@@ -1,0 +1,52 @@
+<div id="mainContainer">
+    <div id="header">
+        <button (click)="executeEventClose(infoChildComponent)">x</button>
+    </div>
+    <div>
+        <input type="text" #searchQuery>
+        <button (click)="executeEventSearch(searchQuery.value, infoChildComponent)">Search</button>
+    </div>
+    <div id="content">
+        <h1>{{infoChildComponent.title}}</h1>
+        <p>{{infoChildComponent.text}}</p>
+        <img src="{{infoChildComponent.imgUrl}}" alt="">    
+    </div>
+    <div>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Killed By</th>
+            </tr>
+            <tr *ngFor="let x of infoChildComponent.table">
+                <td>{{x.name}}</td>
+                <td>{{x.status}}</td>
+                <div>
+                    <td *ngIf="x.status == 'Dead'">{{x.killedBy}}</td>
+                </div>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- <div>
+    <h1>{{infoChildComponent.title}}</h1>
+    <p>{{infoChildComponent.text}}</p>
+    <img src="{{infoChildComponent.imgUrl}}" alt="">
+    <div>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Status</th>
+                <th>Killed By</th>
+            </tr>
+            <tr *ngFor="let x of array">
+                <td>{{x.name}}</td>
+                <td>{{x.status}}</td>
+                <div>
+                    <td *ngIf="x.status == 'Dead'">{{x.killedBy}}</td>
+                </div>
+            </tr>
+        </table>
+    </div>
+</div> -->
